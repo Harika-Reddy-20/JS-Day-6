@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Functions:</h1>
+    <p>It is a piece of code which will be used for reusability, it means write once , call multiple times or call
+        anywhere.
+    </p>
+    <h4>Function Types:</h4>
+    <ol>
+        <li>Function without parameters , without return.</li>
+        <li>Function with params , without return.</li>
+        <li>Function with params , with return.</li>
+    </ol>
+    <h4>Function Delcration:</h4>
+    <pre>
+        function functionname ( parameter1 , parameter2, ....) {       //Function Head
+            block of code
+        }
+        functionname ( ) ;
+        <h3>Function Expression;</h3>
+        var functionname = function ( parameter1 , parameter2) {       //Function Head
+                code
+        }
+        functionname ( ) ;</pre>
+        <h4>Difference between function declaration and function expression:</h4>
+        <p>
+            Function Declarations its automatically hoisted but fun expressions not hoisted and treat as a variable so it shows undefined.</p>
+
+            <h4>Function Constructor:</h4>
+            <pre>
+                var x = new Function("{body}") 
+                Function Declaration
+                        function add(num1,num2){
+                        return num1+num2;
+                        }
+                        console.log(add(2,5))
+                        
+                Fun Expression
+                        var add2=function (num1,num2){
+                            return num1+num2;
+                        }
+                        console.log(add2(2,10))
+                        
+                Fun Constructor
+                        var add3=new Function ("num1","num2","{return num1+num2}");
+                        console.log(add3(2,15))
+            </pre>
+            <h4>Imeddiately invoked function:</h4>
+            <pre>
+                (function(){
+                    console.log('IIFE');
+                })()</pre>
+                <h4>First Class Function:</h4>
+                <ol>
+                    <li>A fun can be passed as an argument to another function.</li>
+                    <li>A function can be returned by another function. </li>
+                    <li>A function can be assigned as a value.</li>
+                </ol>
+                <h4>Call Back Function:</h4>
+                <p>where we can pass another function as an argument an directly invoke it.A function going to be passed as an argument to another fun and executed later.</p>
+                <pre> function a (x){
+                    x();
+                    console.log('y');
+                }
+                function hi(){
+                    console.log('z');
+                }
+                a(hi);</pre>
+                <h4>Higher Order Function:</h4>
+                <p>Which accepts another functiona as an argument or return a fun as a return value or both.</p>
+                <h4>Clousers:</h4>
+                <p>It is a combination of both inner and lexical environment created by the inner function. We are able to access the variable from outer scope.</p>
+
+
+</body>
+
+</html>
